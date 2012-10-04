@@ -2,6 +2,7 @@ package pt.carlos.alex.rosario;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ public class MainActivity extends SherlockActivity {
 	TextView dia_semana;
 
 	Date dia;
-	Calendar calendario;
+	GregorianCalendar calendario;
 	String d_semana;
 
 	@AfterViews
@@ -28,7 +29,7 @@ public class MainActivity extends SherlockActivity {
 
 //		calendario = new GregorianCalendar();
 //		calendario.setTime(dia);
-		calendario = Calendar.getInstance();
+		calendario = (GregorianCalendar) GregorianCalendar.getInstance();
 
 		switch (calendario.get(Calendar.DAY_OF_WEEK)) {
 		case Calendar.SUNDAY:
