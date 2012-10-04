@@ -1,8 +1,7 @@
 <resources>
 
-    <string name="app_name">Rosario</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
+    <string name="app_name">Rosário</string>
+    <string name="menu_settings">Definições</string>
     <string name="title_activity_main">Rosário</string>
 
 </resources>
