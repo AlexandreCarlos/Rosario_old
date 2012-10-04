@@ -1,0 +1,32 @@
+10-03 22:07:04.010: I/dalvikvm(23815): threadid=4: reacting to signal 3
+10-03 22:07:04.060: I/dalvikvm(23815): Wrote stack traces to '/data/anr/traces.txt'
+10-03 22:07:10.890: I/dalvikvm(23815): threadid=4: reacting to signal 3
+10-03 22:07:10.900: I/dalvikvm(23815): Wrote stack traces to '/data/anr/traces.txt'
+10-03 22:07:25.270: D/AndroidRuntime(23892): Shutting down VM
+10-03 22:07:25.280: W/dalvikvm(23892): threadid=1: thread exiting with uncaught exception (group=0x40114760)
+10-03 22:07:25.300: E/AndroidRuntime(23892): FATAL EXCEPTION: main
+10-03 22:07:25.300: E/AndroidRuntime(23892): java.lang.RuntimeException: Unable to start activity ComponentInfo{pt.carlos.alex.rosario/pt.carlos.alex.rosario.MainActivity_}: java.lang.IllegalStateException: You must use Theme.Sherlock, Theme.Sherlock.Light, Theme.Sherlock.Light.DarkActionBar, or a derivative.
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1818)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:1834)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.access$500(ActivityThread.java:122)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1027)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.os.Looper.loop(Looper.java:132)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.main(ActivityThread.java:4126)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at java.lang.reflect.Method.invokeNative(Native Method)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at java.lang.reflect.Method.invoke(Method.java:491)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:844)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:602)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at dalvik.system.NativeStart.main(Native Method)
+10-03 22:07:25.300: E/AndroidRuntime(23892): Caused by: java.lang.IllegalStateException: You must use Theme.Sherlock, Theme.Sherlock.Light, Theme.Sherlock.Light.DarkActionBar, or a derivative.
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.generateLayout(ActionBarSherlockCompat.java:1007)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.installDecor(ActionBarSherlockCompat.java:919)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.setContentView(ActionBarSherlockCompat.java:853)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.app.SherlockActivity.setContentView(SherlockActivity.java:218)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at pt.carlos.alex.rosario.MainActivity_.setContentView(MainActivity_.java:39)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at pt.carlos.alex.rosario.MainActivity_.onCreate(MainActivity_.java:28)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1050)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1782)
+10-03 22:07:25.300: E/AndroidRuntime(23892): 	... 11 more
+10-03 22:07:27.340: I/dalvikvm(23892): threadid=4: reacting to signal 3
+10-03 22:07:27.350: I/dalvikvm(23892): Wrote stack traces to '/data/anr/traces.txt'
