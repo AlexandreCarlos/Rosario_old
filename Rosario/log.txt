@@ -1,32 +1,97 @@
-10-03 22:07:04.010: I/dalvikvm(23815): threadid=4: reacting to signal 3
-10-03 22:07:04.060: I/dalvikvm(23815): Wrote stack traces to '/data/anr/traces.txt'
-10-03 22:07:10.890: I/dalvikvm(23815): threadid=4: reacting to signal 3
-10-03 22:07:10.900: I/dalvikvm(23815): Wrote stack traces to '/data/anr/traces.txt'
-10-03 22:07:25.270: D/AndroidRuntime(23892): Shutting down VM
-10-03 22:07:25.280: W/dalvikvm(23892): threadid=1: thread exiting with uncaught exception (group=0x40114760)
-10-03 22:07:25.300: E/AndroidRuntime(23892): FATAL EXCEPTION: main
-10-03 22:07:25.300: E/AndroidRuntime(23892): java.lang.RuntimeException: Unable to start activity ComponentInfo{pt.carlos.alex.rosario/pt.carlos.alex.rosario.MainActivity_}: java.lang.IllegalStateException: You must use Theme.Sherlock, Theme.Sherlock.Light, Theme.Sherlock.Light.DarkActionBar, or a derivative.
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1818)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:1834)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.access$500(ActivityThread.java:122)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1027)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.os.Handler.dispatchMessage(Handler.java:99)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.os.Looper.loop(Looper.java:132)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.main(ActivityThread.java:4126)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at java.lang.reflect.Method.invokeNative(Native Method)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at java.lang.reflect.Method.invoke(Method.java:491)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:844)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:602)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at dalvik.system.NativeStart.main(Native Method)
-10-03 22:07:25.300: E/AndroidRuntime(23892): Caused by: java.lang.IllegalStateException: You must use Theme.Sherlock, Theme.Sherlock.Light, Theme.Sherlock.Light.DarkActionBar, or a derivative.
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.generateLayout(ActionBarSherlockCompat.java:1007)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.installDecor(ActionBarSherlockCompat.java:919)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.internal.ActionBarSherlockCompat.setContentView(ActionBarSherlockCompat.java:853)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at com.actionbarsherlock.app.SherlockActivity.setContentView(SherlockActivity.java:218)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at pt.carlos.alex.rosario.MainActivity_.setContentView(MainActivity_.java:39)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at pt.carlos.alex.rosario.MainActivity_.onCreate(MainActivity_.java:28)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1050)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1782)
-10-03 22:07:25.300: E/AndroidRuntime(23892): 	... 11 more
-10-03 22:07:27.340: I/dalvikvm(23892): threadid=4: reacting to signal 3
-10-03 22:07:27.350: I/dalvikvm(23892): Wrote stack traces to '/data/anr/traces.txt'
+10-06 11:11:30.396: I/dalvikvm(749): Could not find method com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarContainer.onHoverEvent
+10-06 11:11:30.396: W/dalvikvm(749): VFY: unable to resolve virtual method 4203: Lcom/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:11:30.396: D/dalvikvm(749): VFY: replacing opcode 0x6f at 0x0000
+10-06 11:11:30.486: I/dalvikvm(749): Could not find method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.dispatchHoverEvent
+10-06 11:11:30.486: W/dalvikvm(749): VFY: unable to resolve virtual method 5063: Lcom/actionbarsherlock/internal/widget/ActionBarView$HomeView;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:11:30.486: D/dalvikvm(749): VFY: replacing opcode 0x6e at 0x0000
+10-06 11:11:30.486: I/dalvikvm(749): Could not find method android.widget.FrameLayout.onPopulateAccessibilityEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onPopulateAccessibilityEvent
+10-06 11:11:30.486: W/dalvikvm(749): VFY: unable to resolve virtual method 2985: Landroid/widget/FrameLayout;.onPopulateAccessibilityEvent (Landroid/view/accessibility/AccessibilityEvent;)V
+10-06 11:11:30.486: D/dalvikvm(749): VFY: replacing opcode 0x6f at 0x0006
+10-06 11:11:30.627: D/AndroidRuntime(749): Shutting down VM
+10-06 11:11:30.627: W/dalvikvm(749): threadid=1: thread exiting with uncaught exception (group=0x40014760)
+10-06 11:11:30.637: E/AndroidRuntime(749): FATAL EXCEPTION: main
+10-06 11:11:30.637: E/AndroidRuntime(749): java.lang.RuntimeException: Unable to start activity ComponentInfo{pt.carlos.alex.rosario/pt.carlos.alex.rosario.MainActivity_}: java.lang.ArrayIndexOutOfBoundsException: index=7 length=7
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1748)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:1764)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread.access$1500(ActivityThread.java:122)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1002)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.os.Looper.loop(Looper.java:132)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread.main(ActivityThread.java:4025)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at java.lang.reflect.Method.invokeNative(Native Method)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at java.lang.reflect.Method.invoke(Method.java:491)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:841)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:599)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at dalvik.system.NativeStart.main(Native Method)
+10-06 11:11:30.637: E/AndroidRuntime(749): Caused by: java.lang.ArrayIndexOutOfBoundsException: index=7 length=7
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at pt.carlos.alex.rosario.MainActivity.updateTextWithDate(MainActivity.java:61)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at pt.carlos.alex.rosario.MainActivity_.afterSetContentView_(MainActivity_.java:38)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at pt.carlos.alex.rosario.MainActivity_.setContentView(MainActivity_.java:44)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at pt.carlos.alex.rosario.MainActivity_.onCreate(MainActivity_.java:30)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1048)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1712)
+10-06 11:11:30.637: E/AndroidRuntime(749): 	... 11 more
+10-06 11:11:36.637: I/Process(749): Sending signal. PID: 749 SIG: 9
+10-06 11:19:24.006: I/dalvikvm(786): Could not find method com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarContainer.onHoverEvent
+10-06 11:19:24.006: W/dalvikvm(786): VFY: unable to resolve virtual method 4203: Lcom/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:19:24.017: D/dalvikvm(786): VFY: replacing opcode 0x6f at 0x0000
+10-06 11:19:24.056: I/dalvikvm(786): Could not find method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.dispatchHoverEvent
+10-06 11:19:24.067: W/dalvikvm(786): VFY: unable to resolve virtual method 5063: Lcom/actionbarsherlock/internal/widget/ActionBarView$HomeView;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:19:24.067: D/dalvikvm(786): VFY: replacing opcode 0x6e at 0x0000
+10-06 11:19:24.067: I/dalvikvm(786): Could not find method android.widget.FrameLayout.onPopulateAccessibilityEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onPopulateAccessibilityEvent
+10-06 11:19:24.067: W/dalvikvm(786): VFY: unable to resolve virtual method 2985: Landroid/widget/FrameLayout;.onPopulateAccessibilityEvent (Landroid/view/accessibility/AccessibilityEvent;)V
+10-06 11:19:24.067: D/dalvikvm(786): VFY: replacing opcode 0x6f at 0x0006
+10-06 11:19:24.186: D/Rosário(786): index_dia_semana7
+10-06 11:19:24.197: E/Rosário(786): Erro no updateTextWithDate
+10-06 11:19:24.197: E/Rosário(786): java.lang.ArrayIndexOutOfBoundsException: index=7 length=7
+10-06 11:19:24.197: E/Rosário(786): 	at pt.carlos.alex.rosario.MainActivity.updateTextWithDate(MainActivity.java:57)
+10-06 11:19:24.197: E/Rosário(786): 	at pt.carlos.alex.rosario.MainActivity_.afterSetContentView_(MainActivity_.java:38)
+10-06 11:19:24.197: E/Rosário(786): 	at pt.carlos.alex.rosario.MainActivity_.setContentView(MainActivity_.java:44)
+10-06 11:19:24.197: E/Rosário(786): 	at pt.carlos.alex.rosario.MainActivity_.onCreate(MainActivity_.java:30)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1048)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1712)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:1764)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.ActivityThread.access$1500(ActivityThread.java:122)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1002)
+10-06 11:19:24.197: E/Rosário(786): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-06 11:19:24.197: E/Rosário(786): 	at android.os.Looper.loop(Looper.java:132)
+10-06 11:19:24.197: E/Rosário(786): 	at android.app.ActivityThread.main(ActivityThread.java:4025)
+10-06 11:19:24.197: E/Rosário(786): 	at java.lang.reflect.Method.invokeNative(Native Method)
+10-06 11:19:24.197: E/Rosário(786): 	at java.lang.reflect.Method.invoke(Method.java:491)
+10-06 11:19:24.197: E/Rosário(786): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:841)
+10-06 11:19:24.197: E/Rosário(786): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:599)
+10-06 11:19:24.197: E/Rosário(786): 	at dalvik.system.NativeStart.main(Native Method)
+10-06 11:19:24.217: V/TLINE(786): new: android.text.TextLine@40683510
+10-06 11:21:38.626: D/dalvikvm(786): GC_EXPLICIT freed 189K, 5% free 6430K/6727K, paused 3ms+3ms
+10-05 11:23:02.134: D/Rosário(786): index_dia_semana6
+10-05 11:23:57.464: D/dalvikvm(786): GC_EXPLICIT freed 38K, 4% free 6471K/6727K, paused 5ms+3ms
+10-06 11:27:47.816: I/dalvikvm(849): Could not find method com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarContainer.onHoverEvent
+10-06 11:27:47.816: W/dalvikvm(849): VFY: unable to resolve virtual method 4203: Lcom/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:27:47.816: D/dalvikvm(849): VFY: replacing opcode 0x6f at 0x0000
+10-06 11:27:47.866: I/dalvikvm(849): Could not find method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onHoverEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.dispatchHoverEvent
+10-06 11:27:47.866: W/dalvikvm(849): VFY: unable to resolve virtual method 5063: Lcom/actionbarsherlock/internal/widget/ActionBarView$HomeView;.onHoverEvent (Landroid/view/MotionEvent;)Z
+10-06 11:27:47.866: D/dalvikvm(849): VFY: replacing opcode 0x6e at 0x0000
+10-06 11:27:47.876: I/dalvikvm(849): Could not find method android.widget.FrameLayout.onPopulateAccessibilityEvent, referenced from method com.actionbarsherlock.internal.widget.ActionBarView$HomeView.onPopulateAccessibilityEvent
+10-06 11:27:47.876: W/dalvikvm(849): VFY: unable to resolve virtual method 2985: Landroid/widget/FrameLayout;.onPopulateAccessibilityEvent (Landroid/view/accessibility/AccessibilityEvent;)V
+10-06 11:27:47.876: D/dalvikvm(849): VFY: replacing opcode 0x6f at 0x0006
+10-06 11:27:48.006: D/Rosário(849): index_dia_semana: 7
+10-06 11:27:48.006: E/Rosário(849): Erro no updateTextWithDate
+10-06 11:27:48.006: E/Rosário(849): java.lang.ArrayIndexOutOfBoundsException: index=7 length=7
+10-06 11:27:48.006: E/Rosário(849): 	at pt.carlos.alex.rosario.MainActivity.updateTextWithDate(MainActivity.java:61)
+10-06 11:27:48.006: E/Rosário(849): 	at pt.carlos.alex.rosario.MainActivity_.afterSetContentView_(MainActivity_.java:38)
+10-06 11:27:48.006: E/Rosário(849): 	at pt.carlos.alex.rosario.MainActivity_.setContentView(MainActivity_.java:44)
+10-06 11:27:48.006: E/Rosário(849): 	at pt.carlos.alex.rosario.MainActivity_.onCreate(MainActivity_.java:30)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1048)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:1712)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:1764)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.ActivityThread.access$1500(ActivityThread.java:122)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1002)
+10-06 11:27:48.006: E/Rosário(849): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-06 11:27:48.006: E/Rosário(849): 	at android.os.Looper.loop(Looper.java:132)
+10-06 11:27:48.006: E/Rosário(849): 	at android.app.ActivityThread.main(ActivityThread.java:4025)
+10-06 11:27:48.006: E/Rosário(849): 	at java.lang.reflect.Method.invokeNative(Native Method)
+10-06 11:27:48.006: E/Rosário(849): 	at java.lang.reflect.Method.invoke(Method.java:491)
+10-06 11:27:48.006: E/Rosário(849): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:841)
+10-06 11:27:48.006: E/Rosário(849): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:599)
+10-06 11:27:48.006: E/Rosário(849): 	at dalvik.system.NativeStart.main(Native Method)
+10-06 11:27:48.036: V/TLINE(849): new: android.text.TextLine@40683f08
