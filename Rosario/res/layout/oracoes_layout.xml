@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+           <EditText
+               android:id="@+id/oracoesText"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="top|fill_vertical|fill_horizontal"
+               android:clickable="false"
+               android:contentDescription="@string/oracoes_dia"
+               android:ems="10"
+               android:hint="@string/oracoes_dia"
+               android:text="@string/oracoes_dia" 
+               android:inputType="text">
+               
+            
+        </EditText>
+
+
+</LinearLayout>
