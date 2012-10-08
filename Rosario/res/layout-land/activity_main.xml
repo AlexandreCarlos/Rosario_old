@@ -24,8 +24,8 @@
 
     <fragment
         android:id="@+id/oracoes"
-        android:name="pt.carlos.alex.rosario.Oracoes_"
-        android:layout_width="wrap_content"
+        android:name="pt.carlos.alex.rosario.Mostra_Oracoes_"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/dia_semana"
         android:layout_alignBaseline="@id/misterios_do_dia"

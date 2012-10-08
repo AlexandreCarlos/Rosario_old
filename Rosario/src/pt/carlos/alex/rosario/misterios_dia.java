@@ -56,7 +56,9 @@ public class misterios_dia extends SherlockListFragment {
 			Log.d(TAG, "List Item Click: " + position);
 		}
 		
-		eventBus.post(Integer.valueOf(position));
+//		eventBus.post(Integer.valueOf(position));
+		
+		eventBus.post(new Rezar(index_dia_semana, position));
 		
     }
 	
