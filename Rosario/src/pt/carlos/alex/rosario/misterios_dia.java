@@ -24,7 +24,8 @@ public class misterios_dia extends SherlockListFragment {
 	final static String TAG = "Rosário";
 	final static boolean DEBUG = true;
 	
-	int index_dia_semana;
+	private int index_dia_semana = -1;
+	private MainActivity ma = null;
 	private EventBus eventBus;
 	
 	@AfterInject
@@ -32,7 +33,7 @@ public class misterios_dia extends SherlockListFragment {
 		
 		eventBus = EventBus.getDefault();
 		
-		MainActivity ma = (MainActivity)getActivity();
+		ma = (MainActivity)getActivity();
 		index_dia_semana = ma.index_dia_semana;
 		
 		if (DEBUG) {
@@ -45,8 +46,11 @@ public class misterios_dia extends SherlockListFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
+//		setListAdapter(new ArrayAdapter<String>(getActivity(),
+//				android.R.layout.simple_list_item_1, android.R.id.text1, Misterios.Design__Misterios(index_dia_semana)));
+		
 		setListAdapter(new ArrayAdapter<String>(getActivity(),
-				android.R.layout.simple_list_item_1, android.R.id.text1, Misterios.Design__Misterios(index_dia_semana)));
+				R.layout.misterio_list_itemlayout, R.id.item_misterio, Misterios.Design__Misterios(index_dia_semana)));
 			
 	}
 	
@@ -56,11 +60,10 @@ public class misterios_dia extends SherlockListFragment {
 			Log.d(TAG, "List Item Click: " + position);
 		}
 		
-//		eventBus.post(Integer.valueOf(position));
+		ma.misterio_selected = position; //Persistência do estado (mistério seleccionado)
 		
 		eventBus.post(new Rezar(index_dia_semana, position));
 		
     }
-	
 	
 }

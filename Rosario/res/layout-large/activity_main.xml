@@ -12,7 +12,7 @@
         android:gravity="center"
         android:hint="@string/dia_semana"
         android:text="@string/dia_semana"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         tools:context=".MainActivity" />
 

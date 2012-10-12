@@ -17,7 +17,7 @@
                 android:contentDescription="@string/oracoes_dia"
                 android:hint="@string/oracoes_dia"
                 android:text="@string/oracoes_dia" 
-                android:textSize="20sp">
+                android:textSize="18sp">
 
             </TextView>
 

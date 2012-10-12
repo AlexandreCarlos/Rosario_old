@@ -23,49 +23,57 @@ public class Mostra_Oracoes extends SherlockFragment {
 
 	private static final String TAG = "Mostra Orações";
 	private static final boolean DEBUG = true;
-
 	private EventBus eventBus;
-	private int misterioClick = -1;
-	private int dia_semana = -1;
-
+	private boolean registado = false;
+	
 	@ViewById
-	TextView oracoesText;
+	protected TextView oracoesText;
 
 	@AfterInject
 	void inicializa() {
 		eventBus = EventBus.getDefault();
-	
+		registaBus();
+		
 		if (DEBUG) {
 			Log.d(TAG, "inicializa");
 		}
 	}
 
+	private void registaBus() {
+		if (!registado) {
+			eventBus.register(this);
+			registado = true;
+		}
+	}
+	
+	private void desregistaBus() {
+		if (registado) {
+			eventBus.unregister(this);
+			registado = false;
+		}
+	}
+	
+	
 	@Override
 	public void onResume() {
 		super.onResume();
-		eventBus.register(this);
+		registaBus();
 	}
 
 	@Override
 	public void onPause() {
-		eventBus.unregister(this);
+		desregistaBus();
 		super.onPause();
 	}
 
 
-	void escreveOracoes() {
+	void escreveOracoes(int dia_semana, int misterio) {
 
-//		if (misterioClick < 1) {
-//			oracoesText.setText("Orações do 1º Mistério" + Orações.PaiNosso());
-//		} else {
-//			oracoesText.setText("Orações do " + misterioClick + "º Mistério" + Orações.SalveRainha());
-//		}
-		
-		if (misterioClick < 0) {
+		if (misterio < 0) {
 			return;
 		}
 
-		oracoesText.setText(Misterios.Obter_Misterio_do_Dia(dia_semana, misterioClick));
+		oracoesText.setText(Misterios.Obter_Misterio_do_Dia(dia_semana, misterio));
 		
 	}
 
@@ -75,10 +83,7 @@ public class Mostra_Oracoes extends SherlockFragment {
 			Log.d(TAG, "Evento recebido:" + event);
 		}
 
-		misterioClick = event.misterio;
-		dia_semana = event.dia_semana;
-		
-		escreveOracoes();
+		escreveOracoes(event.dia_semana, event.misterio);
 	}
 
 }
